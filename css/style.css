@@ -1,0 +1,346 @@
+:root {
+  --sky: #dff2ff;
+  --ocean: #0086c9;
+  --deep-ocean: #005d91;
+  --sun: #ffcb3f;
+  --text: #10212e;
+  --card: #ffffff;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(223, 242, 255, 0.9), rgba(223, 242, 255, 0.96)),
+    url("../assets/uruguay-tourism-bg.svg") center/cover fixed;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.main-menu {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid #c7e7f9;
+  backdrop-filter: blur(4px);
+}
+
+.menu-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 70px;
+}
+
+.brand {
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--deep-ocean);
+  letter-spacing: 0.03em;
+}
+
+.menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: var(--deep-ocean);
+  border: 1px solid #9fd2ed;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  background: var(--white);
+}
+
+.menu-links a:hover {
+  background: #e8f6ff;
+}
+
+.menu-links .night-link {
+  color: #fff;
+  background: #111;
+  border-color: #111;
+}
+
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lang-selector label {
+  font-weight: 700;
+  color: var(--deep-ocean);
+}
+
+.lang-selector select {
+  border: 1px solid #9fd2ed;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font: inherit;
+  background: #fff;
+  color: var(--deep-ocean);
+}
+
+.site-header {
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(130deg, rgba(7, 19, 27, 0.58), rgba(7, 19, 27, 0.44)),
+    url("../assets/plaza-independencia-blur.svg") center/cover no-repeat;
+  filter: blur(1.4px);
+  transform: scale(1.015);
+  transform-origin: center;
+}
+
+.site-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.sub-header {
+  color: var(--white);
+  background:
+    linear-gradient(130deg, rgba(0, 93, 145, 0.93), rgba(0, 134, 201, 0.88)),
+    url("../assets/uruguay-tourism-bg.svg") center/cover;
+  padding: 3rem 0;
+}
+
+.tag {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 62ch;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(16, 33, 46, 0.11);
+  border-top: 4px solid #9fd2ed;
+}
+
+.highlight {
+  border: 2px solid var(--sun);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.7rem;
+  background: var(--sun);
+  color: #111;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+}
+
+.cta,
+.tour-list,
+.profile,
+.reviews {
+  margin-block: 2rem;
+}
+
+.tour-list article,
+.profile section,
+.reviews {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 18px rgba(16, 33, 46, 0.09);
+  border-left: 5px solid #8bc9e9;
+}
+
+footer {
+  background: #083650;
+  color: #e8f5fd;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+@media (max-width: 760px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .menu-links {
+    justify-content: center;
+  }
+
+  .lang-selector {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+.featured-reviews {
+  margin: 2.4rem auto 2.6rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.section-head a {
+  text-decoration: none;
+  color: var(--deep-ocean);
+  font-weight: 700;
+}
+
+.review-note {
+  margin-top: 0;
+  opacity: 0.8;
+}
+
+.review-grid,
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(16, 33, 46, 0.09);
+  border-left: 5px solid #8bc9e9;
+}
+
+.review-card.full {
+  border-left-color: #ffcb3f;
+}
+
+.stars {
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.08em;
+  color: #ffb400;
+  font-size: 1.08rem;
+}
+
+.source {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+  opacity: 0.8;
+}
+
+.reviews-page {
+  margin-block: 2rem;
+}
+
+.reviews-intro {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 18px rgba(16, 33, 46, 0.09);
+}
+
+
+.contact-section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin: 0 auto 2.8rem;
+  box-shadow: 0 10px 20px rgba(16, 33, 46, 0.08);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.8rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #b7d9eb;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+.contact-form .full {
+  grid-column: 1 / -1;
+}
+
+.contact-form button {
+  width: fit-content;
+  border: none;
+  border-radius: 999px;
+  background: #0ea34a;
+  color: white;
+  padding: 0.65rem 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.wsp-invite {
+  margin-bottom: 0;
+}
+
+.wsp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  text-decoration: none;
+  background: #18b956;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 0.72rem 1rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
