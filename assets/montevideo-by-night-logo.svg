@@ -1,0 +1,7 @@
+<svg width="700" height="210" viewBox="0 0 700 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="8" width="684" height="194" rx="24" stroke="#FFFFFF" stroke-width="4"/>
+  <path d="M88 67C103 47 134 51 143 74C131 79 115 82 102 79C94 77 86 73 88 67Z" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+  <circle cx="611" cy="66" r="3.8" fill="#FFFFFF"/>
+  <text x="350" y="94" text-anchor="middle" fill="#FFFFFF" font-size="46" font-family="Verdana, sans-serif" font-weight="700">MONTEVIDEO</text>
+  <text x="350" y="151" text-anchor="middle" fill="#FFFFFF" font-size="54" font-family="Verdana, sans-serif" font-weight="800">BY NIGHT</text>
+</svg>
